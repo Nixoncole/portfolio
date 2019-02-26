@@ -2,7 +2,6 @@ import React from 'react'
 import Helmet from 'react-helmet'
 
 import Layout from '../components/layout'
-// import Lightbox from 'react-images'
 import PastWork from '../components/PastWork'
 
 import favbook from '../assets/images/thumbs/myfavbook.png'
@@ -50,50 +49,11 @@ class HomeIndex extends React.Component {
     constructor() {
         super();
 
-        this.state = {
-            lightboxIsOpen: false,
-            currentImage: 0,
-        };
-
-        this.closeLightbox = this.closeLightbox.bind(this);
-        this.gotoNext = this.gotoNext.bind(this);
-        this.gotoPrevious = this.gotoPrevious.bind(this);
-        this.openLightbox = this.openLightbox.bind(this);
-        this.handleClickImage = this.handleClickImage.bind(this);
-    }
-
-    openLightbox (index, event) {
-        event.preventDefault();
-        this.setState({
-            currentImage: index,
-            lightboxIsOpen: true,
-        });
-    }
-    closeLightbox () {
-        this.setState({
-            currentImage: 0,
-            lightboxIsOpen: false,
-        });
-    }
-    gotoPrevious () {
-        this.setState({
-            currentImage: this.state.currentImage - 1,
-        });
-    }
-    gotoNext () {
-        this.setState({
-            currentImage: this.state.currentImage + 1,
-        });
-    }
-    handleClickImage () {
-        if (this.state.currentImage === this.props.images.length - 1) return;
-
-        this.gotoNext();
     }
 
     render() {
-        const siteTitle = "Gatsby Starter - Strata"
-        const siteDescription = "Site description"
+        const siteTitle = "ColeNixonPDX"
+        const siteDescription = "Portfolio site for the one and only Cole Nixon."
 
         return (
             <Layout>
@@ -113,9 +73,6 @@ class HomeIndex extends React.Component {
                          Informatics program. I fell in love and soon realized that the software industry is the place for me, and have set out to gain as much
                          industry relevant knowledge as possible before graduation. Below you will find a collection of some the things I'm proud of, including 
                          past projects, internships, and my brief career in Track and Field. </p>
-                        <ul className="actions">
-                            <li><a href="#" className="button">Learn More</a></li>
-                        </ul>
                     </section>
 
                     <section id="two">

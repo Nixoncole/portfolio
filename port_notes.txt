@@ -1,0 +1,57 @@
+Portfolio Notes
+
+Trying Gatsby for the first time
+	-	Lots of documentation about “CSS Modules”. What are they?
+		o	Dynamically generated CSS classes and ids with unique identifiers such that even 
+when using similarly named identifiers in your CSS file, they are guaranteed to
+not step on each other's namespaces.
+	-	Modules belong in the same dir as .js component? 
+		o	False, they are defined by the relative path on the import line,
+	-	Gatsby-browser.js? Just for imports for DOM
+
+“This seems highly customizable, but requires a lot of attention. Aren’t there easier ways? I remember Jason did something cool.”
+
+	-	Navigate to Jason’s GitHub, and discover that he contributes/hosts most of their tutorials. 
+	-	Pick up on something about their “starter” sites. Start browsing.
+	-	Stumble on one, try to ‘npx gatsby new portfolio <starter-of-my-choice>’. Install completes. ‘npx gatsby develop’ works, but site is not the right one, got basic starter… Hmm..
+	-	npx gatsby limited to some starters, git clone from repo https://github.com/codebushi/gatsby-starter-strata.
+	-	Assumes Gatsby installed. 
+		o	‘npm install gatsby’ – Good
+		o	 ‘gatsby new portfolio <starter-dir>’ – Nope, you don’t have Gatsby  
+		o	Loop here 3 times,
+		o	Install gatsby globally ‘npm install gatsby -g’ – Good
+		o	‘gatsby new portfolio <starter-dir>’ – Good 
+
+
+Site runs, looks good. Tear it apart.
+Try to modify Gallery.js and React Lightbox.
+-	Unsuccessful, keep trying, discover it is naming issue, 
+		PastWork.propTypes = {
+		    images: PropTypes.array
+		};
+Needs to be references as images
+Here:
+       <div>
+            {this.renderWork()}
+            <Lightbox
+                images={this.props.images}
+            />
+        </div>
+
+Also must be “Lightbox”, (duh)
+
+Try setting “next” function to other photos nested in images[i], fail. Lightbox is a blackbox, nevermind.
+Remove Lightbox functionality, change design. Embed links in images. Use Lightbox for format. 
+Add new custom Gallery, PastWork.js, with extra object members for more info. 
+Site looks good now! Trim the fat
+Hmm… How do I force links to open in another tab?
+   - <a href="https://github.com/Nixoncole" target="_blank" className="button">
+Receive LOTS of warnings about security risks, this is a great feature.
+Maybe I’ll fix later
+I find it strange that you do not explicitly define routes. I wonder if there are ways to build APIs with Gatsby, but I’ll investigate later.
+
+
+How do we deploy this bad boi?
+ - Looking through Google Domains, not a lot of info. Google Sites is meh, dont want templates. App engine is confusing.
+ - Start looking back at notes from Jason - Netlify discovered.
+ - Try Netlify... Upload takes forever

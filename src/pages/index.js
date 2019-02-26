@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 // import Lightbox from 'react-images'
 import Gallery from '../components/Gallery'
+import PastWork from '../components/PastWork'
 
 import thumb01 from '../assets/images/thumbs/01.jpg'
 import thumb02 from '../assets/images/thumbs/02.jpg'
@@ -19,6 +20,10 @@ import full04 from '../assets/images/fulls/04.jpg'
 import full05 from '../assets/images/fulls/05.jpg'
 import full06 from '../assets/images/fulls/06.jpg'
 
+import favbooknext from '../assets/images/fulls/myfavbook2.png'
+import favbook from '../assets/images/thumbs/myfavbook.png'
+
+
 const DEFAULT_IMAGES = [
     { id: '1', src: full01, thumbnail: thumb01, caption: 'Photo 1', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
     { id: '2', src: full02, thumbnail: thumb02, caption: 'Photo 2', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
@@ -28,6 +33,10 @@ const DEFAULT_IMAGES = [
     { id: '6', src: full06, thumbnail: thumb06, caption: 'Photo 6', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'}
 ];
 
+const MY_IMAGES = [
+    { id: '1', src: favbooknext, thumbnail: favbook, caption: 'My-Favorite-Book', extern: "https://github.com/Nixoncole/My-Favorite-Book", description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
+    { id: '2', src: full02, thumbnail: thumb02, caption: 'Photo 2', extern: "Somelink", description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
+];
 class HomeIndex extends React.Component {
 
     constructor() {
@@ -89,10 +98,13 @@ class HomeIndex extends React.Component {
 
                     <section id="one">
                         <header className="major">
-                            <h2>Ipsum lorem dolor aliquam ante commodo<br />
-                            magna sed accumsan arcu neque.</h2>
+                            <h2>Born and raised in the Portland Metro area... </h2>
                         </header>
-                        <p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia.</p>
+                        <p>I grew up in the subrbs and dreamed to move far away, but found myself attending Portland State University, where I walked on to the
+                        track and field team. My passion for technology led me to Computer Science, and my interest in medicine led me to OHSU's Biomedical
+                         Informatics program. I fell in love and soon realized that the software industry is the place for me, and have set out to gain as much
+                         industry relevant knowledge as possible before graduation. Below you will find a collection of some the things I'm proud of, including 
+                         past projects, internships, and my brief career in Track and Field. </p>
                         <ul className="actions">
                             <li><a href="#" className="button">Learn More</a></li>
                         </ul>
@@ -100,7 +112,6 @@ class HomeIndex extends React.Component {
 
                     <section id="two">
                         <h2>Recent Work</h2>
-
                         <Gallery images={DEFAULT_IMAGES.map(({ id, src, thumbnail, caption, description }) => ({
                             src,
                             thumbnail,
@@ -149,7 +160,23 @@ class HomeIndex extends React.Component {
                             </div>
                         </div>
                     </section>
+                     <section id="four">
+                        <h2>Recent Work</h2>
+                        <PastWork images={MY_IMAGES.map(({ id, src, thumbnail, caption, description }) => ({
+                            src,
+                            thumbnail,
+                            caption,
+                            description
+                        }))} />
 
+
+                        <ul className="actions">
+                            <li><a href="#" className="button">Full Portfolio</a></li>
+                        </ul>
+                    </section>
+
+
+ 
                 </div>
 
             </Layout>

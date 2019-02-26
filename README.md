@@ -1,18 +1,29 @@
-# gatsby-starter-strata
+# Portfolio Of Cole Nixon
 
-**This is a starter for Gatsby.js V2.**
 
-**The older V1 version of this starter can be found on the v1 branch**
+**Portfolio project for PSU CS465 - Full Stack Development**
+In this project, I chose to use Gatsby.js as an introduction to React and similar web frameworks.
+I chose Gatsby because of the excellent tutorial provided by our guest lecturer https://github.com/jlengstorf
 
-Gatsby starter based on the Strata site template, designed by [HTML5 UP](https://html5up.net/strata). Check out https://codebushi.com/gatsby-starters/ for more Gatsby starters and templates.
-
-## Preview
-
-http://gatsby-strata.surge.sh/
+To read through my notes as I explored Gatsby, following some basic tutorials I found on their website, and then 
+redesigning/reuphostering a Gatsby "starter" site. 
 
 ## Installation
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-`gatsby new gatsby-starter-strata https://github.com/ChangoMan/gatsby-starter-strata`
+```
+git clone https://github.com/Nixoncole/portfolio.git
+cd portfolio
+```
+
+**Ensure that you have Gatsby.js and dependencies installed**
+```
+npm install gatsby
+
+```
 
 Run `gatsby develop` in the terminal to start.
+
+
+**This site is based off of a starter for Gatsby.js V2.**
+**https://github.com/codebushi/gatsby-starter-strata**
+

@@ -2,11 +2,16 @@
 
 
 **Portfolio project for PSU CS465 - Full Stack Development**
+
 In this project, I chose to use Gatsby.js as an introduction to React and similar web frameworks.
 I chose Gatsby because of the excellent tutorial provided by our guest lecturer https://github.com/jlengstorf
 
 To read through my notes as I explored Gatsby, following some basic tutorials I found on their website, and then 
 redesigning/reuphostering a Gatsby "starter" site. 
+
+## See it in action
+
+Just go ahead and visit colenixon.com 
 
 ## Installation
 

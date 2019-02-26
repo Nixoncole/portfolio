@@ -55,3 +55,7 @@ How do we deploy this bad boi?
  - Looking through Google Domains, not a lot of info. Google Sites is meh, dont want templates. App engine is confusing.
  - Start looking back at notes from Jason - Netlify discovered.
  - Try Netlify... Upload takes forever
+ 	 - Could not find how to configure DNS on google domains.
+ 	 - Found youtube tutorial - https://youtu.be/TwykpjPWvoA?t=413
+ 	 - Just needed to hit button on bottom of Netlify DNS config window to give me names to give to Google.
+ 	 - Set them up and Boom colenixon.com is ready to RUMBLE

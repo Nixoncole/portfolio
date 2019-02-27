@@ -66,7 +66,7 @@ class HomeIndex extends React.Component {
 
                     <section id="one">
                         <header className="major">
-                            <h2>Born and raised in the Portland Metro area... </h2>
+                            <h2>In the south Portland suburbs I was born and raised... </h2>
                         </header>
                         <p>I grew up in the suburbs and dreamed to move far away, but found myself attending Portland State University, where I walked on to the
                         track and field team. My passion for technology led me to Computer Science, and my interest in medicine led me to OHSU's Biomedical
